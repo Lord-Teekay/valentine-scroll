@@ -1,0 +1,98 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap');
+
+@theme {
+  --color-noir: #121212;
+  --color-noir-light: #1a1a1a;
+  --color-noir-lighter: #2a2a2a;
+  --color-rose-gold: #D4A373;
+  --color-rose-gold-light: #E8C9A0;
+  --color-rose-gold-dark: #B8875A;
+  --color-cream: #F5F0EB;
+  --color-soft-white: rgba(255, 255, 255, 0.87);
+  --color-muted: rgba(255, 255, 255, 0.5);
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+/* ── Base Reset ────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height: 100%;
+  background: var(--color-noir);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-soft-white);
+  background: var(--color-noir);
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ──────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* ── Selection ──────────────────────────────────────── */
+::selection {
+  background: var(--color-rose-gold);
+  color: var(--color-noir);
+}
+
+/* ── Typography helpers ─────────────────────────────── */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.text-rose-gold {
+  color: var(--color-rose-gold);
+}
+
+.text-rose-gold-light {
+  color: var(--color-rose-gold-light);
+}
+
+/* ── Gradient overlays ──────────────────────────────── */
+.gradient-noir {
+  background: linear-gradient(180deg, transparent 0%, var(--color-noir) 100%);
+}
+
+.gradient-rose {
+  background: linear-gradient(135deg, var(--color-rose-gold-dark) 0%, var(--color-rose-gold) 50%, var(--color-rose-gold-light) 100%);
+}
+
+/* ── Glow effect ────────────────────────────────────── */
+.glow-rose {
+  text-shadow: 0 0 40px rgba(212, 163, 115, 0.3),
+    0 0 80px rgba(212, 163, 115, 0.15);
+}
+
+/* ── Particle canvas background ─────────────────────── */
+.bg-particles {
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(212, 163, 115, 0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 80% 40%, rgba(212, 163, 115, 0.2) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 30% 70%, rgba(212, 163, 115, 0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 10%, rgba(212, 163, 115, 0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 80%, rgba(212, 163, 115, 0.18) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 50% 50%, rgba(212, 163, 115, 0.12) 0%, transparent 100%),
+    radial-gradient(1px 1px at 20% 90%, rgba(212, 163, 115, 0.22) 0%, transparent 100%);
+}
