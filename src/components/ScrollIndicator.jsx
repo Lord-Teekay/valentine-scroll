@@ -22,12 +22,14 @@ export default function ScrollIndicator() {
                 <motion.div
                     animate={{ scaleY: [0, 1, 0], originY: 0 }}
                     transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                    style={{ willChange: 'transform' }}
                     className="w-[1px] h-8 bg-gradient-to-b from-transparent via-[var(--color-rose-gold)] to-transparent"
                 />
                 {/* Chevron */}
                 <motion.svg
                     animate={{ y: [0, 6, 0], opacity: [0.4, 1, 0.4] }}
                     transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+                    style={{ willChange: 'transform' }}
                     width="16"
                     height="10"
                     viewBox="0 0 16 10"

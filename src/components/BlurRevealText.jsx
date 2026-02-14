@@ -10,11 +10,13 @@ export default function BlurRevealText({ children, className = '', delay = 0 }) 
             initial={{ opacity: 0, filter: 'blur(16px)' }}
             whileInView={{ opacity: 1, filter: 'blur(0px)' }}
             transition={{
-                duration: 1.4,
+                type: 'tween',
+                duration: 0.8,
                 delay,
-                ease: [0.25, 0.46, 0.45, 0.94],
+                ease: 'easeOut',
             }}
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.4 }}
+            style={{ willChange: 'transform, filter' }}
             className={className}
         >
             {children}

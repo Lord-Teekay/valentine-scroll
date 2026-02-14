@@ -69,7 +69,7 @@ export default function CinematicSection({
         >
             {/* Background image layer — uses <img> for reliable sizing */}
             <motion.div
-                style={{ scale: imgScale, filter: grayscaleFilter }}
+                style={{ scale: imgScale, filter: grayscaleFilter, willChange: 'transform' }}
                 className="absolute inset-0 z-0"
             >
                 <img
@@ -90,7 +90,7 @@ export default function CinematicSection({
 
             {/* Content */}
             <motion.div
-                style={{ opacity: contentOpacity, y: contentY }}
+                style={{ opacity: contentOpacity, y: contentY, willChange: 'transform, opacity' }}
                 className="relative z-10 w-full h-full flex items-center justify-center px-6 md:px-12 lg:px-24"
             >
                 {children}

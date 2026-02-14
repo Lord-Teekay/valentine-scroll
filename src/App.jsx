@@ -52,8 +52,9 @@ function Divider({ className = '' }) {
     <motion.div
       initial={{ scaleX: 0 }}
       whileInView={{ scaleX: 1 }}
-      transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-      viewport={{ once: false }}
+      transition={{ type: 'tween', duration: 0.8, ease: 'easeOut' }}
+      viewport={{ once: true }}
+      style={{ willChange: 'transform' }}
       className={`w-20 h-[1px] bg-gradient-to-r from-transparent via-[var(--color-rose-gold)] to-transparent origin-center ${className}`}
     />
   );
@@ -156,8 +157,9 @@ function SectionEssence() {
         <motion.div
           initial={{ opacity: 0, scale: 0.88 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-          viewport={{ once: false, amount: 0.4 }}
+          transition={{ type: 'tween', duration: 0.8, ease: 'easeOut' }}
+          viewport={{ once: true, amount: 0.4 }}
+          style={{ willChange: 'transform' }}
         >
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold leading-[1.3] text-[var(--color-cream)]">
             It's the small things—
@@ -174,8 +176,9 @@ function SectionEssence() {
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 0.06 }}
-          transition={{ duration: 1.8, delay: 0.3, ease: 'easeOut' }}
-          viewport={{ once: false }}
+          transition={{ type: 'tween', duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          style={{ willChange: 'transform' }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] rounded-full border border-[var(--color-rose-gold)] pointer-events-none"
         />
       </div>

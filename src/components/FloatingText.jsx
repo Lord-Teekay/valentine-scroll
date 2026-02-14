@@ -15,11 +15,13 @@ export default function FloatingText({
             initial={{ opacity: 0, y: yOffset, x: xOffset }}
             whileInView={{ opacity: 1, y: 0, x: 0 }}
             transition={{
-                duration: 0.9,
+                type: 'tween',
+                duration: 0.8,
                 delay,
-                ease: [0.25, 0.46, 0.45, 0.94],
+                ease: 'easeOut',
             }}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
+            style={{ willChange: 'transform' }}
             className={className}
         >
             {children}
