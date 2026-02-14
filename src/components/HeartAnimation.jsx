@@ -4,7 +4,6 @@ export default function HeartAnimation({ size = 120, className = '' }) {
     return (
         <motion.div
             className={`inline-block ${className}`}
-            style={{ willChange: 'transform' }}
             animate={{ scale: [1, 1.15, 1, 1.1, 1] }}
             transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
         >

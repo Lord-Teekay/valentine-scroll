@@ -57,7 +57,6 @@ export default function BokehOverlay({ count = 12 }) {
                         top: p.top,
                         background: p.color.replace('VAR_OPACITY', String(p.opacity)),
                         filter: `blur(${p.blurAmount}px)`,
-                        willChange: 'transform',
                     }}
                 />
             ))}
